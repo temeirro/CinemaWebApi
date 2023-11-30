@@ -4,6 +4,7 @@ using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(CinemaDbContext))]
-    partial class CinemaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231130172859_FixImagesd")]
+    partial class FixImagesd
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -112,33 +115,6 @@ namespace Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            Description = "In 1918, a young woman on the brink of madness pursues stardom in a desperate attempt to escape the drudgery, isolation, and lovelessness of life on her parents' farm.\r\n",
-                            Duration = new TimeSpan(0, 1, 44, 0, 0),
-                            ImageUrl = "https://m.media-amazon.com/images/M/MV5BZTFkNmE5MjUtZDE1Yi00ZmQyLTk2YWUtN2EwODA1ZmNlOTA5XkEyXkFqcGdeQXVyMTM1MTE1NDMx._V1_.jpg",
-                            Title = "Pearl",
-                            Year = 2022
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Description = "Coriolanus Snow mentors and develops feelings for the female District 12 tribute during the 10th Hunger Games.\r\n",
-                            Duration = new TimeSpan(0, 2, 20, 0, 0),
-                            ImageUrl = "https://m.media-amazon.com/images/M/MV5BOTZmMmY2MzctMjU2Yy00YjJlLTk1NjAtY2U4MmMxOWZkZWY4XkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_FMjpg_UX1000_.jpg",
-                            Title = "The Hunger Games: The Ballad of Songbirds & Snakes",
-                            Year = 2023
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Description = "Sophie reflects on the shared joy and private melancholy of a holiday she took with her father twenty years earlier.",
-                            Duration = new TimeSpan(0, 1, 45, 0, 0),
-                            ImageUrl = "https://upload.wikimedia.org/wikipedia/ru/5/50/Aftersun_poster_2022.jpg",
-                            Title = "Aftersun",
-                            Year = 2022
-                        },
-                        new
-                        {
-                            Id = 4,
                             Description = "Dune is a 2021 American epic science fiction film directed by Denis Villeneuve, who co-wrote the screenplay with Jon Spaihts and Eric Roth",
                             Duration = new TimeSpan(0, 2, 35, 0, 0),
                             ImageUrl = "https://m.media-amazon.com/images/M/MV5BN2FjNmEyNWMtYzM0ZS00NjIyLTg5YzYtYThlMGVjNzE1OGViXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg",
@@ -147,7 +123,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = 5,
+                            Id = 2,
                             Description = "John, an ex-CIA officer, is entrusted with the responsibility of safeguarding an entrepreneur's daughter. When the girl gets kidnapped, John vows to seek revenge.",
                             Duration = new TimeSpan(0, 2, 26, 0, 0),
                             ImageUrl = "https://m.media-amazon.com/images/M/MV5BODFlMmEwMDgtYjhmZi00ZTE5LTk2NWQtMWE1Y2M0NjkzOGYxXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
@@ -156,7 +132,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = 6,
+                            Id = 3,
                             Description = "Commodus takes over power and demotes Maximus, one of the preferred generals of his father, Emperor Marcus Aurelius. As a result, Maximus is relegated to fighting till death as a gladiator.",
                             Duration = new TimeSpan(0, 2, 35, 0, 0),
                             ImageUrl = "https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
@@ -165,7 +141,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = 7,
+                            Id = 4,
                             Description = "When a group of firefighters from California ignores a warning by Superintendent Eric Marsh about a wildfire, he decides to get his crew certified as wildfire hotshots.",
                             Duration = new TimeSpan(0, 2, 13, 0, 0),
                             ImageUrl = "https://m.media-amazon.com/images/M/MV5BNjQyMjgyNDEtZDBmYi00ZGI1LTk2YjMtOTVhOTVkMmU5YWZmXkEyXkFqcGdeQXVyMTQyMTMwOTk0._V1_.jpg",
@@ -174,7 +150,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = 8,
+                            Id = 5,
                             Description = "Baker Dill is a fishing boat captain who leads tours off of the tranquil enclave of Plymouth Island. His peaceful life is soon shattered when his ex-wife Karen tracks him down. Desperate for help, Karen begs Baker to save her -- and their young son -- from her abusive husband. She wants him to take the brute out for a fishing excursion -- then throw him overboard to the sharks. Thrust back into a life that he wanted to forget, Baker now finds himself struggling to choose between right and wrong.",
                             Duration = new TimeSpan(0, 1, 46, 0, 0),
                             ImageUrl = "https://m.media-amazon.com/images/M/MV5BY2VjNGFkZmUtMTI1MS00YmRiLTg1MmUtYzI0ODM1OWRkMjIyXkEyXkFqcGdeQXVyOTIxNTAyMzU@._V1_FMjpg_UX1000_.jpg",
@@ -183,7 +159,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = 9,
+                            Id = 6,
                             Description = "An unmanned, half-mile-long freight train hurtles towards a town at breakneck speed. An engineer and a young conductor, who happen to be on the same route, must race against time to try and stop it.",
                             Duration = new TimeSpan(0, 1, 38, 0, 0),
                             ImageUrl = "https://m.media-amazon.com/images/M/MV5BMjI4NDQwMDM0N15BMl5BanBnXkFtZTcwMzY1ODMwNA@@._V1_.jpg",
@@ -215,7 +191,12 @@ namespace Infrastructure.Migrations
                         new
                         {
                             MovieId = 1,
-                            GenreId = 7
+                            GenreId = 2
+                        },
+                        new
+                        {
+                            MovieId = 1,
+                            GenreId = 3
                         },
                         new
                         {
@@ -225,7 +206,12 @@ namespace Infrastructure.Migrations
                         new
                         {
                             MovieId = 2,
-                            GenreId = 4
+                            GenreId = 2
+                        },
+                        new
+                        {
+                            MovieId = 2,
+                            GenreId = 3
                         },
                         new
                         {
@@ -234,77 +220,42 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            MovieId = 4,
-                            GenreId = 1
-                        },
-                        new
-                        {
-                            MovieId = 4,
-                            GenreId = 2
-                        },
-                        new
-                        {
-                            MovieId = 4,
+                            MovieId = 3,
                             GenreId = 3
                         },
                         new
                         {
-                            MovieId = 5,
-                            GenreId = 1
-                        },
-                        new
-                        {
-                            MovieId = 5,
-                            GenreId = 2
-                        },
-                        new
-                        {
-                            MovieId = 5,
-                            GenreId = 3
-                        },
-                        new
-                        {
-                            MovieId = 6,
-                            GenreId = 1
-                        },
-                        new
-                        {
-                            MovieId = 6,
-                            GenreId = 3
-                        },
-                        new
-                        {
-                            MovieId = 6,
+                            MovieId = 3,
                             GenreId = 5
                         },
                         new
                         {
-                            MovieId = 7,
+                            MovieId = 4,
                             GenreId = 1
                         },
                         new
                         {
-                            MovieId = 7,
+                            MovieId = 4,
                             GenreId = 7
                         },
                         new
                         {
-                            MovieId = 8,
+                            MovieId = 5,
                             GenreId = 1
                         },
                         new
                         {
-                            MovieId = 8,
+                            MovieId = 5,
                             GenreId = 7
                         },
                         new
                         {
-                            MovieId = 9,
+                            MovieId = 6,
                             GenreId = 1
                         },
                         new
                         {
-                            MovieId = 9,
+                            MovieId = 6,
                             GenreId = 3
                         });
                 });
