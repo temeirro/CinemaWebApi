@@ -19,7 +19,6 @@ var builder = WebApplication.CreateBuilder(args);
 string connection = builder.Configuration.GetConnectionString("AzureConnection") ?? throw new InvalidOperationException("Connection string 'ShopMVCConnection' not found.");
 
 builder.Services.AddDbContext(connection);
-
 // Add services to the container.
 
 builder.Services.AddControllers()
@@ -81,11 +80,12 @@ app.UseHttpsRedirection();
 //global hadler middleware
 app.UseMiddleware<ErrorHandlerMiddleware>();
 
-app.UseCors(x => x
-                    .AllowAnyMethod()
-                    .AllowAnyHeader()
-                    .SetIsOriginAllowed(origin => true) // allow any origin
-                    .AllowCredentials()); // allow credentials
+app.UseCors(opt =>
+{
+    opt.AllowAnyHeader();
+    opt.AllowAnyMethod();
+    opt.AllowAnyOrigin();
+});
 
 app.UseAuthorization();
 
