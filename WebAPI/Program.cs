@@ -81,6 +81,11 @@ app.UseHttpsRedirection();
 //global hadler middleware
 app.UseMiddleware<ErrorHandlerMiddleware>();
 
+app.UseCors(x => x
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .SetIsOriginAllowed(origin => true) // allow any origin
+                    .AllowCredentials()); // allow credentials
 
 app.UseAuthorization();
 
